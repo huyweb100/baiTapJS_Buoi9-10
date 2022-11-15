@@ -10,18 +10,18 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- Bootstrap 4 -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
 
 	<!-- JQuery UI -->
-	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
 
 	<!-- Animate -->
 	<!-- <link rel="stylesheet" href="css/animate.css"> -->
 
 	<!-- My CSS -->
-	<link rel="stylesheet" href="css/modal.css">
+	<link rel="stylesheet" href="./css/modal.css">
 
-	<link rel="stylesheet" href="css/style4.css">
+	<link rel="stylesheet" href="./css/style4.css">
 
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -114,7 +114,7 @@
 							</div>
 							<div class="col-md-6 text-right">
 								<button class="btn btn-primary" id="btnThem" data-toggle="modal"
-									data-target="#myModal">Thêm nhân viên</button>
+									data-target="#myModal" onclick="resetForm()">Thêm nhân viên</button>
 							</div>
 						</div>
 					</div>
@@ -187,7 +187,7 @@
 				<!-- Modal body -->
 				<div class="modal-body">
 
-					<form role="form">
+					<form role="form" id="formQLNV">
 
 						<div class="form-group">
 							<div class="input-group">
@@ -264,9 +264,9 @@
 								</div>
 								<select class="form-control" id="chucvu">
 									<option>Chọn chức vụ</option>
-									<option>Sếp</option>
-									<option>Trưởng phòng</option>
-									<option>Nhân viên</option>
+									<option value="1">Sếp</option>
+									<option value="2">Trưởng phòng</option>
+									<option value="3">Nhân viên</option>
 								</select>
 							</div>
 
@@ -288,8 +288,8 @@
 
 				<!-- Modal footer -->
 				<div class="modal-footer" id="modal-footer">
-					<button id="btnThemNV" type="button" class="btn btn-success">Thêm người dùng</button>
-					<button id="btnCapNhat" type="button" class="btn btn-success">Cập nhật</button>
+					<button id="btnThemNV" type="button" class="btn btn-success" onclick="themNhanVien()">Thêm người dùng</button>
+					<button id="btnCapNhat" type="button" class="btn btn-success" onclick="capNhatSinhVien()">Cập nhật</button>
 					<button id="btnDong" type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
 				</div>
 
@@ -324,6 +324,14 @@
 			});
 		});
 	</script>
+
+	<!-- MAIN JS  -->
+	<script src="./JS/mainJS/nhanVien.js"></script>
+<script src="./JS/mainJS/danhSachNV.js"></script>
+<script src="./JS/mainJS/validation.js"></script>
+<script src="./JS/mainJS/main.js"></script>
+
+
 </body>
 
 </html>
